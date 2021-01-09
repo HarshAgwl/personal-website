@@ -1,5 +1,5 @@
 <script>
-    import { Button, SkeletonPlaceholder } from 'carbon-components-svelte';
+    import { Content, Button, SkeletonPlaceholder } from 'carbon-components-svelte';
     import { navigate } from 'svelte-routing';
 
     import { searchPosts } from '../../utils/api/posts.js'
@@ -67,46 +67,48 @@
     }
 </style>
 
-<div class="posts">
-    {#if hasPageLoaded}
-        {#each posts as post}
-            <div class="post">
-                <h2 
-                    class="title"
-                    on:click={() => navigate(`/post/${post._id}`)}
-                >
-                    {post.title}
-                </h2>
-                <p class="date">
-                    {makeCreatedOnUserFriendly(post.createdOn)}
-                </p>
-                <div class="teaser">
-                    {@html post.teaser}
+<Content class="content">
+    <div class="posts">
+        {#if hasPageLoaded}
+            {#each posts as post}
+                <div class="post">
+                    <h2 
+                        class="title"
+                        on:click={() => navigate(`/post/${post._id}`)}
+                    >
+                        {post.title}
+                    </h2>
+                    <p class="date">
+                        {makeCreatedOnUserFriendly(post.createdOn)}
+                    </p>
+                    <div class="teaser">
+                        {@html post.teaser}
+                    </div>
                 </div>
-            </div>
-        {/each}
-            <Button 
-                on:click={() => switchPage("back")}
-                disabled={paginationDetails.pageNo <= 1}
-            >
-                Back
-            </Button>
-            <Button 
-                on:click={() => switchPage("next")}
-                disabled={posts.length < paginationDetails.searchResultSize}>
-                Next
-            </Button>
-        {:else}
-            <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
-            <br/>
-            <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
-            <br/>
-            <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
-            <br/>
-            <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
-            <br/>
-            <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
-            <br/>
-            <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
-    {/if}
-</div>
+            {/each}
+                <Button 
+                    on:click={() => switchPage("back")}
+                    disabled={paginationDetails.pageNo <= 1}
+                >
+                    Back
+                </Button>
+                <Button 
+                    on:click={() => switchPage("next")}
+                    disabled={posts.length < paginationDetails.searchResultSize}>
+                    Next
+                </Button>
+            {:else}
+                <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
+                <br/>
+                <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
+                <br/>
+                <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
+                <br/>
+                <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
+                <br/>
+                <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
+                <br/>
+                <SkeletonPlaceholder style="height: 12rem; width: 80%;" />
+        {/if}
+    </div>
+</Content>

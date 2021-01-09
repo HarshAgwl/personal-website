@@ -18,4 +18,10 @@ RUN yarn install
 
 RUN yarn global add nodemon
 
+ARG DB_CONNECTION_URL
+ENV DB_CONNECTION_URL=${DB_CONNECTION_URL}
+
+ARG ADMIN_PASSWORD
+ENV ADMIN_PASSWORD=${ADMIN_PASSWORD}
+
 CMD ["nodemon", "index.js"]

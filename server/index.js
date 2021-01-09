@@ -28,15 +28,15 @@ app.get("*", (req, res) => {
     res.sendFile('index.html', { root })
 })
 
-// mongoose.connect(config.mongoDbUrl);
+mongoose.connect(config.mongoDbUrl);
 
-// const db = mongoose.connection;
+const db = mongoose.connection;
 
-// db.on('error', function(err) { console.log(err.message); });
+db.on('error', function(err) { console.log(err.message); });
 
-// db.once('open', () => {
-//     console.log("Successfully connected to the database");
-// });
+db.once('open', () => {
+    console.log("Successfully connected to the database");
+});
 
 const port = process.env.port || 8085
 

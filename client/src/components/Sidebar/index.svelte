@@ -1,14 +1,20 @@
 <script>
     import { Link, navigate } from 'svelte-routing';
 
-    let expanded = false
+    import Menu20 from 'carbon-icons-svelte/lib/Menu20'
+    import Close20 from 'carbon-icons-svelte/lib/Close20'
 
-    // import Menu20 from "carbon-icons-svelte/lib/Menu20";
-    // import Close20 from "carbon-icons-svelte/lib/Close20";
-    // import LogoLinkedIn24  from "carbon-icons-svelte/lib/LogoLinkedIn24"
-    // import LogoInstagram24  from "carbon-icons-svelte/lib/LogoInstagram24"
-    // import LogoTwitter24  from "carbon-icons-svelte/lib/LogoTwitter24"
-    // import LogoGitHub24  from "carbon-icons-svelte/lib/LogoGitHub24"
+    import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte'
+    import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
+    import FaTwitter from 'svelte-icons/fa/FaTwitter.svelte'
+    import FaGithub from 'svelte-icons/fa/FaGithub.svelte'
+
+    // import LogoLinkedIn24  from '../../../node_modules/carbon-icons-svelte/lib/LogoLinkedIn24/LogoLinkedin24.svelte'
+    // import LogoInstagram24  from '../../../node_modules/carbon-icons-svelte/lib/LogoInstagram24/LogoInstagram24.svelte'
+    // import LogoTwitter24  from '../../../node_modules/carbon-icons-svelte/lib/LogoTwitter24/LogoTwitter24.svelte'
+    // import LogoGitHub24  from '../../../node_modules/carbon-icons-svelte/lib/LogoGitHub24/LogoGithub24.svelte'
+    
+    let expanded = false
 </script>
 
 <style>
@@ -78,6 +84,10 @@
         display: none;
     }
 
+    :global(.icons a svg){
+        width: 20px;
+    }
+
     @media (max-width: 960px){
         .sidebar{
             text-align: left;
@@ -125,11 +135,11 @@
 
     <div class="hamburger">
         {#if expanded}
-            <!-- <Close20 on:click={() => expanded = false} /> -->
-            <span on:click={() => expanded = false}>Close</span>
+            <Close20 on:click={() => expanded = false} />
+            <!-- <span on:click={() => expanded = false}>Close</span> -->
         {:else}
-            <!-- <Menu20 on:click={() => expanded = true} /> -->
-            <span on:click={() => expanded = false}>Open</span>
+            <Menu20 on:click={() => expanded = true} />
+            <!-- <span on:click={() => expanded = false}>Open</span> -->
         {/if}
     </div>
 
@@ -149,21 +159,37 @@
     </div>
 
     <div class="icons">
-        <a href="https://www.linkedin.com/in/itsharshag" alt="LinkedIn link">
-            <!-- <LogoLinkedIn24/> -->
-            LinkedIn
+        <a 
+            href="https://www.linkedin.com/in/itsharshag" 
+            alt="LinkedIn link"
+            target="_blank"
+        >
+            <FaLinkedin/>
+            <!-- LinkedIn -->
         </a>
-        <a href="https://www.instagram.com/_itsharshag" alt="Instagram link">
-            <!-- <LogoInstagram24/> -->
-            Instagram
+        <a
+            href="https://www.instagram.com/_itsharshag" 
+            alt="Instagram link"
+            target="_blank"
+        >
+            <FaInstagram/>
+            <!-- Instagram -->
         </a>
-        <a href="https://twitter.com/itsharshag" alt="Twitter link">
-            <!-- <LogoTwitter24/> -->
-            Twitter
+        <a 
+            href="https://twitter.com/itsharshag"
+            alt="Twitter link"
+            target="_blank"
+        >
+            <FaTwitter/>
+            <!-- Twitter -->
         </a>
-        <a href="https://github.com/HarshAgwl" alt="GitHub link">
-            <!-- <LogoGitHub24/> -->
-            GitHub
+        <a 
+            href="https://github.com/HarshAgwl" 
+            alt="GitHub link"
+            target="_blank"
+        >
+            <FaGithub/>
+            <!-- GitHub -->
         </a>
     </div>
 </div>
