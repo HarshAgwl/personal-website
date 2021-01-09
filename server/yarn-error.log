@@ -1,0 +1,36 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe C:\Users\Harsh\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init -t
+
+PATH: 
+  D:\tools;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Anaconda\Anaconda3;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\Program Files\Git\cmd;D:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Users\Harsh\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;C:\Users\Harsh\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\Harsh\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:136216:13)
+      at Interface.emit (events.js:314:20)
+      at Interface._ttyWrite (readline.js:875:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:314:20)
+      at emitKeys (internal/readline/utils.js:344:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1144:36)
+      at ReadStream.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:307:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
