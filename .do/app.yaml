@@ -1,8 +1,0 @@
-name: personal-website
-services:
-- dockerfile_path: Dockerfile
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: HarshAgwl/personal-website
-  name: personal-website
