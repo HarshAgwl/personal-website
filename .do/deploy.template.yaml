@@ -4,5 +4,5 @@ spec:
   - dockerfile_path: Dockerfile
     git:
       branch: main
-      repo_clone_url: https://github.com/HarshAgwal/personal-website.git
+      repo_clone_url: https://github.com/HarshAgwl/personal-website.git
     name: personal-website

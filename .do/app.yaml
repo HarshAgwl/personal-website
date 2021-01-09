@@ -4,5 +4,5 @@ services:
   github:
     branch: main
     deploy_on_push: true
-    repo: HarshAgwal/personal-website
+    repo: HarshAgwl/personal-website
   name: personal-website
