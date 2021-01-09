@@ -125,9 +125,11 @@
 
     <div class="hamburger">
         {#if expanded}
-            <Close20 on:click={() => expanded = false} />
+            <!-- <Close20 on:click={() => expanded = false} /> -->
+            <span on:click={() => expanded = false}>Close</span>
         {:else}
-            <Menu20 on:click={() => expanded = true} />
+            <!-- <Menu20 on:click={() => expanded = true} /> -->
+            <span on:click={() => expanded = false}>Open</span>
         {/if}
     </div>
 
