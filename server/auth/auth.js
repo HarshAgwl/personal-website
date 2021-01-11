@@ -2,13 +2,8 @@ class AuthClient {
     constructor() {}
 
     async auth(credentials) {
-        console.log("HERE")
         const { password } = credentials
         
-        console.log("LAL")
-        console.log(process.env.ADMIN_PASSWORD.length)
-        console.log("LOLE2s")
-
         const isPasswordCorrect = password === process.env.ADMIN_PASSWORD
 
         if (isPasswordCorrect) {
