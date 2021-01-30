@@ -1,7 +1,7 @@
 <script>
     import { Content } from "carbon-components-svelte";
 
-    const playStoreIconUrl = "https://www.harshagrawal.ml/wp-content/uploads/2020/02/PlayStoreIcon-100x100.png"
+    const playStoreIconUrl = "https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png"
 
     let videoGames = [
         {
@@ -37,7 +37,6 @@
     }
     .item{
         max-width: 300px;
-        /* text-align: center; */
     }
     .details{
         padding-top: 5px;
@@ -51,11 +50,9 @@
         gap: 5px;
         align-items: center;
         text-decoration: none;
-        /* width: fit-content; */
-        /* margin: auto; */
     }
     .game-download-link img{
-        height: 20px;
+        height: 25px;
     }
     .websites a{
         text-decoration: none;
@@ -119,7 +116,8 @@
                         <h3>{videoGame.name}</h3>
                         <p>{videoGame.description}</p>
                         <a href={videoGame.downloadLink} class="game-download-link">
-                            <img src={playStoreIconUrl} alt="Play Store icon">Download from Play Store
+                            <img src={playStoreIconUrl} alt="Play Store icon">
+                            <!-- Download from Play Store -->
                         </a>
                     </div>
                 </div>
