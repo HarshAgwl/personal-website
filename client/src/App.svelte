@@ -12,8 +12,9 @@
 
   import Home from './pages/Home/index.svelte';
   import About from './pages/About/index.svelte';
-  import Work from './pages/Work/index.svelte';
+  import Projects from './pages/Projects/index.svelte';
   import Videos from './pages/Videos/index.svelte';
+  import Blog from './pages/Blog/index.svelte';
   import Post from './pages/Post/index.svelte';
 
   import AdminHome from "./pages/AdminHome";
@@ -93,16 +94,19 @@
 <Theme persist bind:theme>
   <Router>
   <div class="grid">
-    <Sidebar />
+    <Router>
+    <Route component="{Sidebar}"/>
+  </Router>
       <ToastNotifications />
+      <Route path="/blog" component="{Blog}"/>
       <Route path="/post/:id" let:params>
         <Post id={params.id}/>
       </Route>
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/work">
-        <Work />
+      <Route path="/projects">
+        <Projects />
       </Route>
       <Route path="/videos">
         <Videos />

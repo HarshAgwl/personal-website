@@ -1,25 +1,28 @@
-.post{
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+.post {
     margin: 20px;
     margin-left: 0px;
-
     padding: 20px;
     padding-left: 0px;
     padding-bottom: 0px;
-    /* border: 3px solid black; */
-    /* border-bottom: 3px solid rgba(0,0,0,0.2); */
 }
-.post:first-child{
+
+.post:first-child {
     margin-top: 0px;
     padding-top: 0px;
 }
-.post .teaser{
+
+.post .teaser {
     padding-bottom: 20px;
-    border-bottom: 3px solid rgba(0,0,0,0.2);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
-.post .date{
+
+.post .date {
     padding: 2px 0px;
     opacity: 0.8;
 }
-.post .title{
+
+.post .title {
     color: #0f62fe;
 }
