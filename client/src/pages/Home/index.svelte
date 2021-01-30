@@ -184,7 +184,7 @@
 
 <Content class="content">
     <div class="video-games items">
-        <h1 class="title">Fun Interactive experience aka Video Games</h1>
+        <h1 class="title">Fun Interactive experiences aka Video Games</h1>
         <div class="grid">
             {#each videoGames as item}
                 <div 
